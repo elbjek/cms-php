@@ -1,5 +1,8 @@
 <?php require "views/partials/header.view.php" ?>
-<a href="/admin/products" class="btn btn-primary">< Back to all</a>
+<div class="col content reset ">
+<?php require "views/partials/usernav.view.php" ?> 
+<form action="">
+    <a href="/admin/products" class="backtoall">Back to all</a>
 <div class="form-group">
     <p>ID</p>
     <h3><?= $product->id ?></h3>
@@ -18,5 +21,9 @@
 <div class="form-group">
     <p>Image</p>
     <img src="<?= $product->image ?>" alt="">
+</div>
+
+</form>
+
 </div>
 <?php require "views/partials/footer.view.php" ?>

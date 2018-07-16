@@ -1,0 +1,143 @@
+body{
+    margin:0;
+    padding:0;
+}
+.reset{
+    margin:0;
+    padding:0;
+}
+/* ///// FIXED SIDE NAVIGATION ////// */
+.sidenav {
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+}
+.logo{
+    background-color: #292F36;
+    border-bottom: 2px solid rgba(255,255 ,255 , 0.5);
+}
+.logo a:first-of-type{
+    font-size: 30px;
+    font-weight: bolder;
+}
+.logo a{ 
+    padding:15px 15px 15px 30px;
+    color:white;
+}
+/* ///SIDE MENU LIST ELEMENTS/// */
+.sidemenu{
+    background-color:#292F36 ;
+    color:white;
+    height:100vh;
+    overflow: hidden;
+
+}
+ .sidemenu ul li{
+    padding-left:30px;
+} 
+.sidemenu ul li a{
+    padding: 20px 8px 20px 16px;
+    color:white;
+}
+
+.sidemenu ul li i{
+    color:#F2A948;
+}
+.toggle-list-items{
+    padding: 20px 8px 20px 16px;
+}
+.sidemenu ul li:hover >a{
+    background-color: white;
+    text-decoration: none;
+    color:#2A2B2A;
+}
+.sidemenu ul li:hover{
+    background-color: white;
+} */
+/* ///USER NAVIGATION AND SEARCH BAR/// */
+.usernav{
+    background-color: white;
+    padding-left:520px;
+ }
+.usernav form input{
+    border:none;
+    border-radius: 5px;
+    background-color:transparent;
+    font-size: 18px;
+    max-width:500px;
+}
+.usernav form label i{
+    color:#F2A948;
+    font-size: 20px;
+}
+.usernav form input::placeholder{
+    color: #292F36;
+    opacity: 0.6;
+}
+
+.usernav ul{
+    margin:0;
+    padding:26px 0px;
+}
+.usernav ul li{
+    display: inline;
+    margin-left:20px;
+}
+.usernav ul li a{
+    font-size: 15px;
+    font-weight: bold;
+    color: #292F36;
+}
+.usernav ul li a:hover{
+    text-decoration: none;
+
+}
+
+
+/* //TOGGLE CLASSES// */
+.toggle-menu{
+    width:75px !important;
+    display:block;
+}
+.toggle-elements{
+    visibility: hidden;
+}
+
+.toggle-logo{
+    display:none;
+}
+.toggle-bar{
+    padding: 26px 15px 26px 35px !important;
+}
+/* //INDEX VIEW// */
+ .center{
+    max-width:1440px;
+    position: absolute;
+    right:0;
+}
+
+.content .heading h4{
+    color: #292F36;
+    opacity:0.8;
+    padding: 15px 0px;
+}
+.content .heading a{
+    padding:10px;
+    background-color: #6AC5B7;
+    border-radius: 8px;
+    color:white;
+    font-weight: bold;
+    font-size: 14px;
+}
+.content .heading a:hover{
+    background-color: #F2A948;
+    color:white;
+    font-weight: bold;
+    text-decoration: none;
+}
+.content .heading a i {
+    margin-right:5px;
+}

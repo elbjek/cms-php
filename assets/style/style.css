@@ -1,107 +1,283 @@
 body{
-    background-color:#E2E2E2; 
     margin:0;
     padding:0;
+    background-color:  #E9E9E9;
+}
+.center{
+    max-width: 1440px;
+    margin:0 auto;
 }
 .reset{
     margin:0;
     padding:0;
 }
-
-.navbar-brand{
-    color:white;
-    text-align:center; 
-    font-size: 28px;
-    margin:0;
-    padding:0;
+/* ///// FIXED SIDE NAVIGATION ////// */
+.sidenav {
+    height: 100%;
+}
+.logo{
+    background-color: #292F36;
+    border-bottom: 2px solid rgba(255,255 ,255 , 0.5);
+}
+.logo a:first-of-type{
+    font-size: 30px;
     font-weight: bolder;
 }
-.navbrand{
-    background-color: #F2A948;
-    padding:18px 20px 20px 40px;
-    text-align:center;
+.logo a{ 
+    padding:15px 15px 15px 30px;
+    color:white;
 }
-.navbrand>a:last-of-type{
+/* ///SIDE MENU LIST ELEMENTS/// */
+.sidemenu{
+    background-color:#292F36 ;
+    color:white;
+    height:100vh;
+    overflow: hidden;
+
+}
+ .sidemenu ul li{
+    padding-left:30px;
+} 
+.sidemenu ul li a{
+    padding: 20px 8px 20px 16px;
     color:white;
 }
 
-.user-bar{
-    background-color: #E9E9E9;
+.sidemenu ul li i{
+    color:#F2A948;
 }
-.user-bar ul li{
-    display:inline;
-    padding-right:10px;
+.toggle-list-items{
+    padding: 20px 8px 20px 16px;
 }
-.user-bar ul li:last-of-type{
-    display:inline;
-    padding-right:20px;
-}
-
-
-
-.sidebar{
-    height: 100vh;
-    background-color:#E9E9E9 ;
-    color:white;
-    top:80px;
-    left:0;
-}
-.sidebar ul{
-    margin:0;
-    padding:0;
-}
-.sidebar ul li{
-    list-style-type: none;
-    padding:20px;
-}
-
-.sidebar ul li:hover{
+.sidemenu ul li:hover >a{
     background-color: white;
-    cursor: pointer;
+    text-decoration: none;
+    color:#2A2B2A;
 }
-.sidebar ul li i{
-    font-size: 25px;
-    margin:0px 10px;
+.sidemenu ul li:hover{
+    background-color: white;
+} 
+.sidemenu ul li:hover >i{
     color:#6AC5B7;
-}
-.sidebar ul li a {
-    color:#4c4c4c;
+} 
+/* ///USER NAVIGATION AND SEARCH BAR/// */
+
+.usernav{
+    background-color: white;
+    padding:0px 80px;
 }
 
-.content{
-    top:80px;
-    padding:20px;
-    left:320px;
+.usernav form .input{
+    border:none;
+    border-radius: 5px;
+    background-color:transparent;
+    font-size: 18px;
+    max-width:500px;
 }
+.usernav form label i{
+    color:#F2A948;
+    font-size: 20px;
+}
+.usernav form input::placeholder{
+    color: #292F36;
+    opacity: 0.6;
+}
+
+.usernav ul{
+    margin:0;
+    padding:26px 0px;
+}
+.usernav ul li{
+    display: inline;
+    margin-left:20px;
+}
+.usernav ul li a{
+    font-size: 15px;
+    font-weight: bold;
+    color: #292F36;
+}
+.usernav ul li a:hover{
+    text-decoration: none;
+
+}
+
+
+/* //TOGGLE CLASSES// */
+.toggle-menu{
+    width:75px !important;
+    display:block;
+}
+.toggle-elements{
+    visibility: hidden;
+}
+
+.toggle-logo{
+    display:none;
+}
+.toggle-bar{
+    padding: 26px 15px 26px 35px !important;
+}
+/* //INDEX VIEW// */
 
 .heading{
-    margin:0;
-    padding:0;
-    grid-template-columns: 20% auto;
+    padding:0px 80px;
+  
 }
-.heading li{
-    display:inline;
+.content .heading h4{
+    color: #292F36;
+    opacity:0.8;
+    padding: 15px 0px;
 }
-.content .addNew{
-    background-color:#6AC5B7 ;
-    border:none;
-    color:white;
+.content .heading a{
     padding:10px;
+    background-color: #6AC5B7;
+    border-radius: 8px;
+    color:white;
+    font-weight: bold;
+    font-size: 14px;
+}
+.content .heading a:hover{
+    background-color: #F2A948;
+    color:white;
+    font-weight: bold;
+    text-decoration: none;
+}
+.content .heading a i {
+    margin-right:5px;
+}
+
+/* //TABLE CONTENT//  */
+
+.product-table{
+border: 1px solid black;
+padding:0px 80px;
+}
+
+
+/* //CREATE NEW PRODUCT// */
+
+.content h1{
+    margin: 0 auto;
+    text-align: center;
+    background-color: #6AC5B7;
+    font-weight: bolder;
+    color:white;
+    padding:15px;
+    font-size: 20px;
+}
+.content .create{
+    padding:0px 60px;
+}
+.content .create form{
+    background-color: white;
+    padding:10px 20px;
+    margin-top:10px;
+}
+
+.form-group{
+    margin:10px 0px;
+}
+
+.content .create input[type="file"]{
+    background-color: red;
+    border:none;
+    display:none;
+}
+.content .create .image{
+    background-color: #292F36;
+    cursor: pointer;
+    padding:10px 8px;
     border-radius: 5px;
-    float: right;
+    color:white;
+}
+.content .create .image:hover{
+    background-color:#6AC5B7;
 }
 
-.table tr th{
-/* background-color: transparent; */
-/* border-radius: 80px; */
-/* overflow:hidden; */
-border-bottom: #4c4c4c;
+.buttons button{
+    margin:10px;
+    border:none;
+    border-radius: 5px; 
+    padding:10px;
+    color:white;
+}
+.buttons button:first-of-type{
+    background-color:#6AC5B7;
+
+}
+.buttons button:last-of-type{
+    background-color:#F2A948;
+}
+.buttons button:hover{
+    background-color: #c97200
 }
 
-.table .rows{
-    /* border-radius: 20px; */
-    background-color: pink;
-    /* overflow: hidden; */
-    border:1px solid black;
-    /* border-block-start: #4c4c4c; */
+
+
+/* //PRODUCTS VIEW */
+.content h1{
+    margin: 0 auto;
+    text-align: center;
+    background-color: #F29215;
+    font-weight: bolder;
+    color:white;
+    padding:15px;
+    font-size: 20px;
+    
 }
+.content .edit{
+    padding:0px 60px;
+}
+.content .edit form{
+    background-color: white;
+    padding:10px 20px;
+    margin-top:10px;
+}
+
+.form-group{
+    margin:10px 0px;
+}
+
+.content .create input[type="file"]{
+    background-color: red;
+    border:none;
+    display:none;
+}
+.content .create .image{
+    background-color: #292F36;
+    cursor: pointer;
+    padding:10px 8px;
+    border-radius: 5px;
+    color:white;
+}
+.content .create .image:hover{
+    background-color:#6AC5B7;
+}
+
+.buttons button{
+    margin:10px;
+    border:none;
+    border-radius: 5px; 
+    padding:10px;
+    color:white;
+}
+.buttons button:first-of-type{
+    background-color:#6AC5B7;
+
+}
+.buttons button:first-of-type:hover{
+
+    background-color: #048A81;
+}
+.buttons button:last-of-type{
+    background-color:#F2A948;
+}
+.buttons button:hover{
+    background-color: #c97200
+}
+.cancel{
+    margin-bottom:10px;
+    color:#292F36;
+    font-weight: bold;
+}
+

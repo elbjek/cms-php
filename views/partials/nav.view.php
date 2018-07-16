@@ -1,26 +1,39 @@
 
-<nav class=" container-fluid navigation reset fixed-top  " >
-    <div class="row reset">   
-        <div class="navbrand col-2 reset d-flex align-items-center justify-content-between">
-            <a href="#" class="navbar-brand">LOGO</a>
-            <a href="#" id="something"><i class="fas fa-ellipsis-v"></i></a>
+<nav class="sidenav sticky-top  col-2 reset">
+        <div class="logo sticky-top d-flex justify-content-between align-items-center">
+            <a href="#" class="navbar-brand reset">LOGO</a>
+            <a href="#" id="menu-toggle-bar" ><i class="fas fa-ellipsis-v"></i></a>
         </div>
-
-        <div class="col user-bar justify-content-end d-flex align-items-center reset">
-            <ul class="reset">
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Profile</a></li>
-            </ul>
-        </div>
-    </div> 
+    <?php require "sidebar.view.php" ?>
 </nav>
 
 <script>
 
-var s = document.getElementById("something");
+var menuicon = document.getElementById("menu-toggle-bar");
+var nav = document.querySelector(".sidenav");
+var logo = document.querySelector(".navbar-brand");
+var sidemenu = document.querySelectorAll(".listElement");
+var icons = document.querySelectorAll(".icon");
 
-s.addEventListener('click',(event)=>{
-event.preventDefault();
-alert("lol")
+
+menuicon.addEventListener('click',(event)=>{
+    event.preventDefault();
+    toggleNavBar();
 })
+
+
+function toggleNavBar(){
+    if(nav.classList){
+        menuicon.classList.add('toggle-bar');
+        logo.classList.toggle('toggle-logo')
+        nav.classList.toggle('toggle-menu');
+        nav.classList.toggle('col-2');
+    };
+
+    sidemenu.forEach((element)=>{
+        element.classList.toggle('toggle-elements')
+    })
+}
+
+
 </script>

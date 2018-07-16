@@ -13,11 +13,6 @@
 </head>
 <body>
 <section class="section">
-    <div class="container-fluid reset">
-
-
-
+    <div class="container-fluid ">
+        <div class=" row ">
 <?php require "nav.view.php"; ?>
-<div class=" row reset d-flex justify-content-between align-items-center ">
-
-<?php require "sidebar.view.php" ?>
