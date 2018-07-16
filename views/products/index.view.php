@@ -4,20 +4,25 @@
 ?>
 <?php require "views/partials/header.view.php" ?>
 
-<a href="/admin/products/create" class="btn btn-primary">Add new product</a>
-<br>
-<br>
-<table class="table table-striped">
+<div class=" col-10 content reset">
+<div class=" heading  ">
+<ul>
+    <li><a href="#">Product list</a></li>
+    <li><a href="/admin/products/create" class="addNew  "><i class="fas fa-plus"></i>Add new product</a></li>
+</ul>
+
+</div>
+
+<table class="table">
     <tr>
-        <th>ID</th>
+
         <th>Name</th>
         <th>Description</th>
         <th>Thumbnail</th>
         <th>Actions</th>
     </tr>
     <?php foreach ($products as $product): ?>
-    <tr>
-        <td><?= $product->id ?></td>
+    <tr class="rows">
         <td><?= $product->title ?></td>
         <td><?= substr($product->description, 0, 50) ?>...</td>
         <td><img src="<?= $product->image ?>" alt="" width="150"></td>
@@ -25,8 +30,10 @@
                     <input type="hidden" name="id" value="<?= $product->id ?>">Edit</button></form> | <form class="deleteForm" action="/admin/products/destroy" method="post"><button class="btn">
                     <input type="hidden" name="id" value="<?= $product->id ?>">Delete</button></form></td>
     </tr>
-    <?php endforeach; ?>
+    <?php endforeach; ?> 
+    
 </table>
+</div>
 <?php require "views/partials/footer.view.php" ?>
 
 <script>

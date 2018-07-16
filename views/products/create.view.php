@@ -1,6 +1,6 @@
 <?php require "views/partials/header.view.php" ?>
 
-    <form action="/admin/products" method="POST" enctype="multipart/form-data">
+    <form class="col-10" action="/admin/products" method="POST" enctype="multipart/form-data">
         <div class="form-group">
             <label for="title">Title</label>
             <input type="text" name="title" id="title" class="form-control">
